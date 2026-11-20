@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit Jumper — Аркада про код</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">&lt;BIT_JUMPER /&gt;</div>
+            <div class="stats">
+                <span>СЧЕТ: <b id="score">0</b></span>
+                <span>РЕКОРД: <b id="high-score">0</b></span>
+            </div>
+        </header>
+
+        <div class="canvas-box">
+            <canvas id="gameCanvas" width="760" height="320"></canvas>
+            
+            <!-- Стартовый экран / Экран проигрыша -->
+            <div id="overlay" class="overlay">
+                <h2 id="overlay-title">ГОТОВ К КОМПИЛЯЦИИ?</h2>
+                <p id="overlay-desc">
+                    <b>ПРОБЕЛ / КЛИК</b> — Прыжок через баги (красные блоки)<br>
+                    <b>SHIFT / ПКМ</b> — Смена полярности (проход сквозь синие/желтые барьеры)
+                </p>
+                <button id="start-btn">▶ ЗАПУСТИТЬ ПРОЦЕСС</button>
+            </div>
+        </div>
+
+        <div class="controls-bar">
+            <button id="btn-jump" class="mobile-btn">⬆ ПРЫЖОК (Пробел)</button>
+            <button id="btn-phase" class="mobile-btn">⚡ СМЕНА ФАЗЫ: <span id="phase-label">TRUE</span> (Shift)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
